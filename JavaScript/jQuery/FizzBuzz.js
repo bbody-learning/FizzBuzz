@@ -2,19 +2,12 @@ $(document).ready(function() {
     $("form").submit(function(event) {
         event.preventDefault();
 
-        var errorMessage = $("errorMessage");
         var input = $("#numberInput");
         var output = $("#output");
 
         output.html("");
-        errorMessage.hide();
 
         var number = parseInt(input.val());
-
-        if (isNaN(number)) {
-            errorMessage.show();
-            return;
-        }
 
         for (var i = 1; i <= number; i++) {
             output.append($("<li>" + getFizzBuzzAnswer(i) + "</li>"))
