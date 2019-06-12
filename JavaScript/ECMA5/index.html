@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="description" content="Webpage description goes here" />
+  <meta charset="utf-8">
+  <title>ECMA5 FizzBuzz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Brendon Body https://github.com/bbody/">
+  <script src="./FizzBuzz.js"></script>
+</head>
+<body>
+    <form onsubmit="runFizzBuzz(); return false;">
+        <span id="errorMessage" style="display: none;">Please only use numbers</span>
+        <br/>
+        <input id="input" type="text" />
+        <br/>
+        <button type="submit">Run</button>
+    </form>
+    <ol id="output">
+
+    </ol>
+</body>
+</html>
