@@ -1,0 +1,21 @@
+.FizzBuzzElement {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 40px;
+        content: attr(fizzbuzzval);
+        transform: translateY(-50%);
+    }
+
+    &:nth-child(3n)::after {
+        content: "Fizz";
+    }
+    &:nth-child(5n)::after {
+        content: "Buzz";
+    }
+    &:nth-child(15n)::after {
+        content: "FizzBuzz";
+    }
+}

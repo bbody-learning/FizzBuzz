@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="description" content="FizzBuzz implementation written in CSS" />
+  <meta charset="utf-8">
+  <title>CSS FizzBuzz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Brendon Body https://github.com/bbody/">
+  <link href="./FizzBuzz.css" rel="stylesheet" type="text/css" media="all">
+  <script>
+    function createOutput() {
+      var output = document.getElementById('output');
+      var input = document.getElementById("inputNumber");
+      output.innerHTML = "";
+
+      var number = parseInt(input.value);
+
+      for (var i = 1; i <= number; i++) {
+        var node = document.createElement("P");
+        var textnode = document.createTextNode(i + " = ");
+        node.setAttribute('FizzBuzzVal', i);
+        node.setAttribute('class', "FizzBuzzElement");
+        node.appendChild(textnode);
+
+        output.appendChild(node);
+      }
+    }
+    document.addEventListener("DOMContentLoaded", function(){
+      var random = Math.floor(Math.random() * (25 - 1) + 1);
+      var input = document.getElementById("inputNumber");
+      input.value = random;
+      createOutput();
+    });
+  </script>
+</head>
+<body>
+    <form onsubmit="createOutput(); return false;">
+        <br/>
+        <input name="inputNumber" id="inputNumber" type="number" />
+        <br/>
+        <button type="submit">Run</button>
+    </form>
+    <div id="output">
+
+    </div>
+</body>
+</html>

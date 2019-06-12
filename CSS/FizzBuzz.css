@@ -1,0 +1,16 @@
+.FizzBuzzElement {
+  position: relative; }
+  .FizzBuzzElement::after {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    content: attr(fizzbuzzval);
+    transform: translateY(-50%); }
+  .FizzBuzzElement:nth-child(3n)::after {
+    content: "Fizz"; }
+  .FizzBuzzElement:nth-child(5n)::after {
+    content: "Buzz"; }
+  .FizzBuzzElement:nth-child(15n)::after {
+    content: "FDSfdsfds"; }
+
+/*# sourceMappingURL=FizzBuzz.css.map */

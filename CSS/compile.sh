@@ -1,0 +1,1 @@
+`sass FizzBuzz.scss FizzBuzz.css`
