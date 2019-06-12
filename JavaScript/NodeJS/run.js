@@ -11,5 +11,5 @@ if (args[0] && !isNaN(parseInt(args[0]))) {
         console.log(`${i}: ${FizzBuzz(i)}`)
     }
 } else {
-    console.log(`Usage: ./run.js Number e.g. ./run.js 15`);
+    console.log(`Usage: ./run.js Number\n\te.g. ./run.js 15`);
 }
